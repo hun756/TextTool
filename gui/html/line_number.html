@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Line Number Count</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--Textarea with icon prefix-->
+        <div class="md-form">
+            <i class="fas fa-pencil-alt prefix"></i>
+            <label for="inputText">Enter your text</label>
+            <textarea id="inputText" class="md-textarea form-control" rows="8"></textarea>
+        </div>
+        <!--Material textarea-->
+        <!-- <div class="md-form">
+            <label for="form7">Result:</label>
+            <textarea id="form7" class="md-textarea form-control" rows="8"></textarea>
+        </div> -->
+
+        <div id="result" class="well justify-content-center"></div>
+    </div>
+
+    <script>
+        document.body.onload = () => {
+            let inputElement = document.getElementById('inputText');
+            let resultElem = document.getElementById('result');
+
+
+            inputElement.addEventListener('change', () => {
+                let text = inputElement.value;
+
+                let lines = text.split(/\r|\r\n|\n/);
+                let count = lines.length;
+
+                result.textContent = `Total Line Number is : ${count}`;
+            });
+        }
+    </script>
+</body>
+
+</html>
