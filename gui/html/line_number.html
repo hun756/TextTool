@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="line_number_optimized.js"></script>
     <title>Line Number Count</title>
 </head>
 
@@ -28,20 +29,20 @@
     </div>
 
     <script>
-        document.body.onload = () => {
-            let inputElement = document.getElementById('inputText');
-            let resultElem = document.getElementById('result');
+        // document.body.onload = () => {
+        //     let inputElement = document.getElementById('inputText');
+        //     let resultElem = document.getElementById('result');
 
 
-            inputElement.addEventListener('change', () => {
-                let text = inputElement.value;
+        //     inputElement.addEventListener('input', () => {
+        //         let text = inputElement.value;
 
-                let lines = text.split(/\r|\r\n|\n/);
-                let count = lines.length;
+        //         let lines = text.split(/\r|\r\n|\n/);
+        //         let count = lines.length;
 
-                result.textContent = `Total Line Number is : ${count}`;
-            });
-        }
+        //         result.textContent = `Total Line Number is : ${count}`;
+        //     });
+        // }
     </script>
 </body>
 
