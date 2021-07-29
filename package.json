@@ -1,0 +1,27 @@
+{
+  "name": "texttool",
+  "version": "0.0.1",
+  "description": "This project provides powerful and fast text tools for the web, written in C++(Cheerp).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hun756/TextTool.git"
+  },
+  "keywords": [
+    "texttool",
+    "webassembly",
+    "wasm",
+    "c++",
+    "cpp17",
+    "cheerp"
+  ],
+  "author": "hun756 <ekemenms@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hun756/TextTool/issues"
+  },
+  "homepage": "https://github.com/hun756/TextTool#readme"
+}
