@@ -19,7 +19,7 @@
  *      Application Starting Point
  */
 
-[[cheerp::genericjs]] void countLineNumber(
+[[cheerp::jsexport]] [[cheerp::genericjs]] void countLineNumber(
     client::HTMLInputElement* inputElem, 
     client::Element* resultElem ) {
 
@@ -40,7 +40,6 @@
                         }
         )
     );
-
 }
 
 void webMain()
