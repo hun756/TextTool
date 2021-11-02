@@ -23,11 +23,11 @@
             <label for="form7">Result:</label>
             <textarea id="form7" class="md-textarea form-control" rows="8"></textarea>
         </div> -->
-        
+
         <div id="result" class="well justify-content-center"></div>
     </div>
-    
-    <script src="line_number_optimized.js"></script>
+
+    <!-- <script src="line_number_optimized.js"></script> -->
     <script>
         // document.body.onload = () => {
         //     let inputElement = document.getElementById('inputText');
@@ -43,6 +43,23 @@
         //         result.textContent = `Total Line Number is : ${count}`;
         //     });
         // }
+
+        document.body.onload = () => {
+            let inputElement = document.getElementById('inputText');
+            let resultElem = document.getElementById('result');
+
+            // WebAssembly.instantiateStreaming(fetch('../../outputs/wasm/line_number_optimized.wasm'), countLineNumber)
+            //     .then(results => {
+            //         countLineNumber(inputElement, resultElem);
+            //     });
+
+            (async () => {
+                const fetchPromise = fetch('line_number_optimized.wasm');
+                const { instance } = await WebAssembly.instantiateStreaming(fetchPromise);
+                instance.exports.countLineNumber(inputElement, resultElem);
+            })();
+        }
+
     </script>
 </body>
 
